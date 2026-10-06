@@ -1,5 +1,6 @@
 import "./index.css";
 import { Composition, Folder } from "remotion";
+import { DSOLaunch, DSO_LAUNCH_DURATION } from "./DSOLaunch";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -51,7 +52,15 @@ export const RemotionRoot: React.FC = () => {
           titleColor: "#000000",
         }}
       />
-
+      {/* Vertical 9:16 launch teaser for Instagram Reels */}
+      <Composition
+        id="DSOLaunch"
+        component={DSOLaunch}
+        durationInFrames={DSO_LAUNCH_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
     </>
   );
 };
